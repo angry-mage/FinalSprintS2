@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+header {
+  background: rgb(95,118,93, 0.7); 
+  margin: -25px;
+  height: 280px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("../public/images/rainforest.png");
+  background-size: cover;
+  margin:25px;
+  /* height: 2000px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link {
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link:hover {
+  border: 2px white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headLogo {
+  margin: 50px 0 0 20px;
+}
+
+footer {
+  background: rgb(95,118,93, 0.7); 
+  height: 50px;
 }
