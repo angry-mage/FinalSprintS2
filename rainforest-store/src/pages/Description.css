@@ -1,0 +1,29 @@
+.desBox {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+
+  background: white;
+  margin: 12.5%;
+  padding: 50px;
+  border: 2pt black solid;
+  box-shadow: 2px 2px 4px rgb(29, 28, 28);
+}
+
+#des {
+  width:70%;
+  border-width: 0 0 0 2pt;
+  border-color: black; 
+  border-style: solid;
+  padding: 20px;
+
+}
+
+#desImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 50%;
+  
+}
