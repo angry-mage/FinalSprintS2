@@ -2,6 +2,8 @@ import './App.css';
 import { Outlet, Link} from "react-router-dom";
 import './index';
 
+//This page set the basic layout and navigation for each page. Outlet and Link are imported from the react router above. All styling for the basic layout and nav bar is contained in App.css. 
+
 function App() {
   return (
     <>

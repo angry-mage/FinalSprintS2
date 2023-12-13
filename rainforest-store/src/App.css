@@ -9,19 +9,20 @@ body {
   background: url("../public/images/rainforest.png");
   background-size: cover;
   margin:25px;
-  /* height: 2000px; */
 }
 
 nav {
   float: right;
 }
 
+
+
 .nav-link {
   padding: 10px;
 }
 
 .nav-link:hover {
-  border: 2px white;
+  background: darkslategray;
 }
 
 .headLogo {

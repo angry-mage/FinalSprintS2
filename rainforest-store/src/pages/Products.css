@@ -1,0 +1,43 @@
+.productBox {
+  background: white;
+  border: 2pt black;
+  width: 250px;
+  height: 250px;
+  padding: 30px;
+  margin: 50px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+#title {
+  text-align: left;
+  
+}
+
+.box1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 100px;
+  
+}
+
+#prodImg {
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+}
