@@ -1,5 +1,6 @@
 header {
-  background: rgb(95,118,93, 0.7); 
+  background: url("../public/images/header.png"); 
+  background-size: cover;
   margin: -25px;
   height: 280px;
 }
@@ -29,7 +30,3 @@ nav {
   margin: 50px 0 0 20px;
 }
 
-footer {
-  background: rgb(95,118,93, 0.7); 
-  height: 50px;
-}
