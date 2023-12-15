@@ -1,8 +1,8 @@
 .productBox {
   background: white;
   border: 2pt black solid;
-  width: 250px;
-  height: 250px;
+  width: 325px;
+  height: 325px;
   padding: 30px;
   margin: 50px;
   text-align: center;
@@ -10,9 +10,14 @@
 
 }
 
-#title {
-  text-align: left;
-  
+#itemName {
+  text-align: center;
+  font-weight: bolder;
+}
+
+#itemPrice {
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .box1 {
@@ -25,6 +30,7 @@
 
 #prodImg {
   align-items: center;
+  size: 5em;
 }
 
 a {

@@ -1,13 +1,32 @@
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: center;
+  padding: 50px;
+  border: 2pt solid black;
+  background: white;
+  box-shadow: 2px 2px 4px rgb(29, 28, 28);
+  border-radius: 5px;
+  margin: 12.5%;
+}
+
+.addToCartButton {
+  display: flex;
+  align-items: center;
+  background-color: #7FB35F;
+  border-radius: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  height: 6em;
+  width: 18em;
+  cursor: pointer;
+}
+
 .desBox {
   display: flex;
   justify-content: space-evenly;
-  width: 70%;
-
-  background: white;
-  margin: 12.5%;
-  padding: 50px;
-  border: 2pt black solid;
-  box-shadow: 2px 2px 4px rgb(29, 28, 28);
 }
 
 #des {
@@ -25,5 +44,27 @@
   margin-right: auto;
 
   width: 50%;
+  
+}
+
+#desText {
+  font-size: larger;
+}
+
+#desPrice {
+  font-size: x-large;
+  font-weight: bolder;
+  padding-top: 2em;
+}
+
+#addToCartText {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+#addToCartImage {
+  width: 20%;
+  height: auto;
   
 }

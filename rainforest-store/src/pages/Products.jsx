@@ -23,8 +23,8 @@ const Products = () => {
         <Link to={`/description/${item.id}`}>
           <div key={item.id} className="productBox">         
           <img src={item.image} alt={item.title} width="50%" height="50%"/>
-          <h4 id="title">{item.title}</h4>
-          <p>${item.price}</p>
+          <h4 id="itemName">{item.title}</h4>
+          <p id="itemPrice">Price: ${item.price}</p>
         </div></Link>
       ))}
     </div>
