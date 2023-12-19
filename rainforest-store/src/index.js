@@ -6,21 +6,24 @@ import Description from "./pages/Description";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import reportWebVitals from './reportWebVitals';
+import { CartProvider } from "./contexts/CartContext";
 
 //BrowserRouter added to create the 4 pages.  Note, the path to the Descriptions page has :id addded to make sure the id of each item is taken into account when opening the description page. 
 
 export default function Main() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Products />} />
-          <Route path="description/:id" element={<Description />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="checkout" element={<Checkout />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Products />} />
+            <Route path="description/:id" element={<Description />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

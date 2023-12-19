@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {CartContext} from '../contexts/CartContext';
 import "../pages/Description.css";
-import addToCart from "../pageIcons/addToCart.png";
-
 
 // Component to add a button to the product description that allows the item to be added to the cart
 
-// DUMMY BUTTON, make sure to add code to fetch item data and write to cart page
-function AddToCart() {
+
+const AddToCart = ({ item }) => {
+  const { addToCart } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    addToCart(item);
+  };
+    
     return (
-      <button className='addToCartButton' type="submit" onClick={function handleClick() {
-      alert("Item added to cart");
-    }}><p id='addToCartText'>Add To Cart</p><img src={addToCart} alt="Add To Cart" id="addToCartImage"/></button>
+      <button className='addToCartButton' onClick={handleAddToCart}>
+        <p id='addToCartText'>Add To Cart</p><img src={"../images/AddCart.png"} alt="Add To Cart" id="addToCartImage"/>    
+      </button>
     )
   };
 

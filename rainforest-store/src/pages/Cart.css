@@ -1,0 +1,19 @@
+.cartItemBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 2pt, solid black;
+    background: white;
+    box-shadow: 2px 2px 4px rgb(29, 28, 28);
+    width: 1220px;
+    height: 150px;
+    margin-left: 80px;
+}
+
+#cartHeader {
+    padding-top: 100px;
+    padding-left: 80px;
+    font-size: 3em;
+    font-weight: bold;
+}

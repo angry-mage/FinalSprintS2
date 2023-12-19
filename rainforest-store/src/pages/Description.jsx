@@ -5,7 +5,10 @@ import './Description.css'
 import Recommended from "../components/Recommended"
 import Footer from "../components/Footer"
 
-//When an item is clicked in the Products.jsx page this page will then open. useParams was imported from the React Router library to ensure that the item ID could be used to fetch the data for that particular item in the API used in the useFetch hook.  The styling for this page can be found on the Description.css page. 
+//When an item is clicked in the Products.jsx page this page will then open. 
+//useParams was imported from the React Router library to ensure that the item ID could be used to fetch the data for that particular item in the API used in the useFetch hook. 
+//The styling for this page can be found on the Description.css page. 
+
 const Description = () => {
   const {id} = useParams();
   const { data, loading, error } = useFetch('https://fakestoreapi.com/products');
@@ -30,13 +33,12 @@ const Description = () => {
             <p>Price: ${item.price}</p></span>
           </div> 
           <div>
-            <AddToCart />
+            <AddToCart item={item} />
           </div>
-          
         </div>
         <Recommended />
         <Footer />
-        </>
+      </>
   )};
   
 export default Description;
