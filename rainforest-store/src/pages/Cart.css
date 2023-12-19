@@ -1,15 +1,50 @@
 .cartItemBox {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     border: 2pt, solid black;
     background: white;
     box-shadow: 2px 2px 4px rgb(29, 28, 28);
     width: 1220px;
     height: 150px;
-    margin-left: 80px;
+    padding: 10px;
+    margin-bottom: 40px;
+    margin-left: 55px;
 }
+
+.cartItemBox img {
+    width: 100px; 
+    height: 100px; 
+    margin-right: 10px;
+    margin-left: 40px; 
+}
+
+.cartItemBox span {
+    flex: 1;
+    margin-right: 10px;
+    font-size: larger; 
+}
+
+.cartItemBox span#titleSpan {
+    margin-right: 300px;
+}
+
+.cartItemBox span#priceSpan {
+    margin-right: 200px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.cartItemBox button {
+    background-color: #ff6347; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 80px;
+}
+
 
 #cartHeader {
     padding-top: 100px;

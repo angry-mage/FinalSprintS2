@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext'
 import Footer from '../components/Footer'
-// import './Cart.css'
+import './Cart.css'
  
-const Cart = () => {
-  const { cartItems, removeFromCart, total } = useContext(CartContext);
+const Cart = () => {  
+  const { cartItems, removeFromCart } = useContext(CartContext);
   
+  const total = cartItems.reduce((total, item) => total += item.price, 0).toFixed(2);
+
   return (
     <>
       <h1 id="cartHeader">Your Cart</h1>
@@ -15,14 +17,14 @@ const Cart = () => {
         ) : (
           <ul>
             {cartItems.map((item) => (
-              <li key={item.id}>
-               <img src={item.image} alt={item.name} width="50px" height="50px" />
-               <span> {item.name}</span>
-               <span> {item.price}</span>
+              <div className="cartItemBox" key={item.id}>
+               <span><img src={item.image} alt={item.title}/></span>
+               <span id="titleSpan"> {item.title}</span>
+               <span id="priceSpan"> ${item.price.toFixed(2)}</span>
                <button onClick={() => removeFromCart(item.id)}>
                   Remove
                </button>
-               </li>
+              </div>
             ))}
           </ul>
         )}
