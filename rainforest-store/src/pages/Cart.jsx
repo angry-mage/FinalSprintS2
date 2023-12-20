@@ -18,12 +18,15 @@ const Cart = () => {
           <ul>
             {cartItems.map((item) => (
               <div className="cartItemBox" key={item.id}>
-               <span><img src={item.image} alt={item.title}/></span>
+               <span><img src={item.image} alt={item.title} id="itemImage"/></span>
                <span id="titleSpan"> {item.title}</span>
                <span id="priceSpan"> ${item.price.toFixed(2)}</span>
-               <button onClick={() => removeFromCart(item.id)}>
-                  Remove
-               </button>
+               <img
+                  src="../images/ClearShoppingCart.png"
+                  alt="Remove From Cart"
+                  onClick={() => removeFromCart(item.id)}
+                  id="removeCartButton"
+                />
               </div>
             ))}
           </ul>

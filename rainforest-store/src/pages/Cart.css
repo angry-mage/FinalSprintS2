@@ -13,11 +13,19 @@
     margin-left: 55px;
 }
 
-.cartItemBox img {
+.cartItemBox img#itemImage {
     width: 100px; 
     height: 100px; 
     margin-right: 10px;
     margin-left: 40px; 
+}
+
+.cartItemBox img#removeCartButton {
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 30px;
 }
 
 .cartItemBox span {
@@ -35,16 +43,6 @@
     font-weight: bold;
     font-size: x-large;
 }
-
-.cartItemBox button {
-    background-color: #ff6347; 
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-right: 80px;
-}
-
 
 #cartHeader {
     padding-top: 100px;
