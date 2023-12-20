@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import CheckoutForm from '../components/CheckoutForm'
 import Footer from '../components/Footer'
+import { calculateTotal } from './Cart.jsx';
 import './Checkout.css'
 
 const Checkout = () => {
@@ -13,7 +14,7 @@ const Checkout = () => {
     <>
       <h1 id='checkoutHeader'>Checkout</h1>
       <div className='checkoutSummaryBox'>
-        <p>Total ${total}</p>
+        <p>Total ${calculateTotal}</p>
       </div>
       
       <Footer />

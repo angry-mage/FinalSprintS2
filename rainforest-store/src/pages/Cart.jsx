@@ -60,4 +60,7 @@ const Cart = () => {
  
 };
  
+export const calculateTotal = (cartItems) => {
+  return cartItems.reduce((total, item) => total + item.price, 0).toFixed(2);
+};
 export default Cart;
