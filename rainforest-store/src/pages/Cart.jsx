@@ -46,7 +46,7 @@ const Cart = () => {
           </button>
         </Link>
 
-        <Link to='/checkout'>
+        <Link to={{ pathname: '/checkout', state: { total } }}>
           <button id='checkoutButton'>
             <p id='checkoutText'>Checkout</p>
           </button>
