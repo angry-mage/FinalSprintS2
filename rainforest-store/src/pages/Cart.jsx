@@ -5,9 +5,9 @@ import Footer from '../components/Footer'
 import './Cart.css'
  
 const Cart = () => {  
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { cartItems, removeFromCart, total } = useContext(CartContext);
   
-  const total = cartItems.reduce((total, item) => total += item.price, 0).toFixed(2);
+  // const total = cartItems.reduce((total, item) => total += item.price, 0).toFixed(2);
 
   return (
     <>
@@ -60,7 +60,7 @@ const Cart = () => {
  
 };
  
-export const calculateTotal = (cartItems) => {
-  return cartItems.reduce((total, item) => total + item.price, 0).toFixed(2);
-};
+// export const calculateTotal = (cartItems) => {
+//   return cartItems.reduce((total, item) => total + item.price, 0).toFixed(2);
+// };
 export default Cart;

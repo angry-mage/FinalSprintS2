@@ -13,8 +13,10 @@ export function CartProvider({ children }) {
     setCartItems((currentItems) => currentItems.filter((item) => item.id !== itemId));  
   };
 
+  const total = cartItems.reduce((total, item) => total += item.price, 0).toFixed(2);
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, total }}>
       {children}
     </CartContext.Provider>
   );

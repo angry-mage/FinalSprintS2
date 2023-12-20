@@ -1,27 +1,69 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import CheckoutForm from '../components/CheckoutForm'
+// import CheckoutForm from '../components/CheckoutForm'
 import Footer from '../components/Footer'
-import { calculateTotal } from './Cart.jsx';
+import { CartContext } from '../contexts/CartContext'
 import './Checkout.css'
+import SubmitOrder from '../components/SubmitOrder';
+
+
 
 const Checkout = () => {
-
+  const  {total}  = useContext(CartContext)
   const location = useLocation();
-  const total = location.state && location.state.total ? location.state.total : 0;
-
+  //const total = location.state && location.state.total ? location.state.total : 0;
+  const calculateShipping = (total) => {
+    if (total > 100 || total == 0) {
+      return (0.00).toFixed(2)
+    } else {
+      return (5).toFixed(2);
+    };
+  }
+  const shipping = calculateShipping(total)
+  const totCost = (parseFloat(total) + parseFloat(shipping)).toFixed(2);
+  
   return (
     <>
       <h1 id='checkoutHeader'>Checkout</h1>
       <div className='checkoutSummaryBox'>
-        <p>Total ${calculateTotal}</p>
+        <h2>Order Summary:</h2>
+        <br />
+        <p className="big">Subtotal: ${total}</p>
+        <p className="big">Shipping: ${shipping}</p>
+        <br />
+        <h2>Total: ${totCost}</h2>
       </div>
+
+      <div className="formBox"> 
+      <form>
+      <h2>Customer Information:</h2>
       
+      <input  className="fullLine" type="text" placeholder="Name"></input>
+      <input  className="halfLine" type="text" placeholder="Street Address"></input>
+      <input className="halfLine" type="text" placeholder="City"></input>
+      <input className="halfLine" type="text" placeholder="Province"></input>
+      <input className="halfLine" type="text" placeholder="Postal Code"></input>
+      <input className="fullLine" type="text" placeholder="Email Address"></input>
+      </form>
+      </div>
+      <div className="formBox"> 
+      <form>
+      <h2>Payment Information:</h2>
+      
+      <input  className="fullLine" type="text" placeholder="Name on Card"></input>
+      <input  className="fullLine" type="text" placeholder="Credit Card Number"></input>
+      <input className="halfLine" type="text" placeholder="Exp"></input>
+      <input className="halfLine" type="text" placeholder="CCV"></input>
+      <input className="fullLine" type="text" placeholder="Address if different from shipping address"></input>
+      </form>
+      </div>
+      <div id="center">
+      <SubmitOrder />
+      </div>
       <Footer />
     </>
   );
 };
-
 
 
 export default Checkout;
