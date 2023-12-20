@@ -8,7 +8,7 @@ import SubmitOrder from '../components/SubmitOrder';
 
 const Checkout = () => {
   const  {total}  = useContext(CartContext)
-  const location = useLocation();
+  // const location = useLocation();
 
   //This functions takes into account the subtotal amount and if it is greater than $250 the shipping will be free, otherwise the shipping will be $5.00. The .toFixed(2) at the end ensures that all dollar amounts will be printed with 2 decimal places. 
 
@@ -26,18 +26,18 @@ const Checkout = () => {
   return (
 
     <>
-      <h1 id='checkoutHeader'>Checkout</h1>
+      <h1 id='checkoutHeader' role="heading">Checkout</h1>
       <div className='checkoutSummaryBox'>
         <h2>Order Summary:</h2>
         <br />
         <p className="big">Subtotal: ${total}</p>
-        <p className="big">Shipping: ${shipping}</p>
+        <p className="big" id="ship">Shipping: ${shipping}</p>
         <br />
         <h2>Total: ${totCost}</h2>
       </div>
       <div className="formBox"> 
-      <form>
-      <h2>Customer Information:</h2>
+      <form role="form">
+      <h2 role="heading">Customer Information:</h2>
       
       <input  className="fullLine" type="text" placeholder="Name"></input>
       <input  className="halfLine" type="text" placeholder="Street Address"></input>
@@ -48,10 +48,10 @@ const Checkout = () => {
       </form>
       </div>
       <div className="formBox"> 
-      <form>
-      <h2>Payment Information:</h2>
+      <form role="form">
+      <h2 role="heading">Payment Information:</h2>
       
-      <input  className="fullLine" type="text" placeholder="Name on Card"></input>
+      <input  className="fullLine" type="text" placeholder="Name on Card" role="textbox"></input>
       <input  className="fullLine" type="text" placeholder="Credit Card Number"></input>
       <input className="halfLine" type="text" placeholder="Exp"></input>
       <input className="halfLine" type="text" placeholder="CCV"></input>

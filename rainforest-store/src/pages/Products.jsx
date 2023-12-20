@@ -9,10 +9,10 @@ const Products = () => {
   const { data, loading, error } = useFetch('https://fakestoreapi.com/products');
 
   if (loading) {
-    return <div>Loading......</div>;
+    return <div role="alert">Loading......</div>;
   }
   if (error) {
-    return <div> Error: {error.message}</div>;
+    return <div role="alert"> Error: {error.message}</div>;
   }
 // Once loaded this functions will return all items found in the API using the map method. The useFetch hook will fetch the id, image, and title of each item and display them each in a div. The styling for this page can be found in the Products.css page. 
 
@@ -26,7 +26,7 @@ const Products = () => {
           <div key={item.id} className="productBox">         
           <img src={item.image} alt={item.title} width="50%" height="50%"/>
           <h4 id="itemName">{item.title}</h4>
-          <p id="itemPrice">Price: ${item.price}</p>
+          <p id="itemPrice">Price: ${(item.price).toFixed(2)}</p>
         </div></Link>
       ))}
     </div>

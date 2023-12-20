@@ -30,7 +30,7 @@ const Description = () => {
             <span id="des">
             <h4>{item.title}</h4>
             <p>{item.description}</p>
-            <p>Price: ${item.price}</p></span>
+            <p>Price: ${(item.price).toFixed(2)}</p></span>
           </div> 
           <div>
             <AddToCart item={item} />
