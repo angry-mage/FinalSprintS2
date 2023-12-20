@@ -1,6 +1,5 @@
 .checkoutSummaryBox {
-    /* display: flex; */
-    width: 70%;
+    width: 60%;
     height: auto;
     background-color: #ebebeb;
     margin-bottom: 60px;
@@ -11,25 +10,10 @@
     padding: 50px;
 }
 
-.formInput {
-    display: flex;
-    width: 1050px;
-    height: 40px;
-    background-color: #FFFFFF;
-    padding-left: 20px;
-    margin-left: 60px;
-    margin-top: 40px;
-    border: 2px solid black;
-    font-size: larger;
-}
-
-.formInput input::placeholder {
-    color: #888888;
-}
 
 #checkoutHeader {
     padding-top: 100px;
-    padding-left: 80px;
+    padding-left: 15%;
     font-size: 3em;
     font-weight: bold;
 }
@@ -41,9 +25,8 @@
 .formBox {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 70%;
+    justify-content: space-evenly;
+    width: 60%;
     height: auto;
     background-color: #ebebeb;
     margin-bottom: 60px;

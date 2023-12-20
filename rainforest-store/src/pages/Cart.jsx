@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 import './Cart.css'
  
+
 const Cart = () => {  
+  //this is retrieving information that is being stored in the CartContext. This allows for the items to be added to and removed from the cart, as well as the total being calculated for use in the Cart and Checkout pages. 
+  
   const { cartItems, removeFromCart, total } = useContext(CartContext);
   
-  // const total = cartItems.reduce((total, item) => total += item.price, 0).toFixed(2);
-
   return (
     <>
       <h1 id="cartHeader">Your Cart</h1>
@@ -60,7 +61,5 @@ const Cart = () => {
  
 };
  
-// export const calculateTotal = (cartItems) => {
-//   return cartItems.reduce((total, item) => total + item.price, 0).toFixed(2);
-// };
+
 export default Cart;

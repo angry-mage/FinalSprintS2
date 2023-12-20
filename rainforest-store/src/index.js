@@ -12,6 +12,7 @@ import { CartProvider } from "./contexts/CartContext";
 
 export default function Main() {
   return (
+    //wrapping the BrowserRouter in the CartProvider allowed for the CartContext to be used throughout the app. 
     <CartProvider>
       <BrowserRouter>
         <Routes>
