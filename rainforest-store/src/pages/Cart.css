@@ -44,9 +44,89 @@
     font-size: x-large;
 }
 
+.subtotalBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2pt, solid black;
+    background: white;
+    box-shadow: 2px 2px 4px rgb(29, 28, 28);
+    width: 1220px;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 80px;
+    margin-left: 95px;
+}
+
+.subtotalBox span#subtotal {
+    font-size: 3em;
+    font-weight: bold;
+    margin-left: 200px;
+}
+
+.subtotalBox span#subtotalPrice {
+    font-size: 3em;
+    font-weight: bold;
+    margin-right: 200px;
+}
+
+.buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2pt, solid black;
+    background: white;
+    box-shadow: 2px 2px 4px rgb(29, 28, 28);
+    width: 1250px;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 80px;
+    margin-left: 80px;
+}
+
+.buttonBox button#continueShoppingButton {
+    display: flex;
+    align-items: center;
+    background-color: #D3DF4F;
+    border-radius: 15px;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 180px;
+    height: 8em;
+    width: 30em;
+    cursor: pointer;
+}
+
+.buttonBox p#continueShoppingText {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.buttonBox button#checkoutButton {
+    display: flex;
+    align-items: center;
+    background-color: #7fb35f;
+    border-radius: 15px;
+    justify-content: center;
+    margin-top: 5px;
+    margin-right: 180px;
+    height: 8em;
+    width: 30em;
+    cursor: pointer;
+}
+
+.buttonBox p#checkoutText {
+    font-size: 3em;
+    font-weight: bold;
+}
+
 #cartHeader {
     padding-top: 100px;
     padding-left: 80px;
     font-size: 3em;
     font-weight: bold;
 }
+
+
